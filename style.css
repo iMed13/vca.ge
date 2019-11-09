@@ -26,12 +26,30 @@ header {
   position: relative;
 }
 
+header .active-header {
+  position: fixed !important;
+  left: 50% !important;
+  top: 0 !important;
+  background: #f5f0e3;
+  width: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: header 0.5s ease-in-out;
+          animation: header 0.5s ease-in-out;
+}
+
+header .active-header .nav-link {
+  color: #010038 !important;
+}
+
 header .header-navigation {
   position: absolute;
-  z-index: 2;
+  z-index: 9;
   left: 0;
   top: 0;
   width: 100%;
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
 }
 
 header .header-navigation section .header-nav {
@@ -51,6 +69,27 @@ header .header-navigation section .header-nav .header-logo img {
   width: 70px;
 }
 
+header .header-navigation section .header-nav .hamburger {
+  display: none;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  header .header-navigation section .header-nav .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+header .header-navigation section .header-nav .hamburger .hamburger-inner {
+  background: #fff;
+}
+
+header .header-navigation section .header-nav .hamburger .hamburger-inner::after, header .header-navigation section .header-nav .hamburger .hamburger-inner::before {
+  background: #fff;
+}
+
 header .header-navigation section .header-nav .nav-ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,7 +97,7 @@ header .header-navigation section .header-nav .nav-ul {
   position: relative;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   header .header-navigation section .header-nav .nav-ul {
     display: none;
   }
@@ -148,6 +187,12 @@ header .header-body .header-body-visa .each-visa .visa-content {
   }
 }
 
+@media (max-width: 1024px) {
+  header .header-body .header-body-visa .each-visa .visa-content {
+    margin: 30px auto !important;
+  }
+}
+
 header .header-body .header-body-visa .each-visa .visa-content:hover {
   cursor: pointer;
   -webkit-transform: rotate(0deg) !important;
@@ -164,6 +209,15 @@ header .header-body .header-body-visa .each-visa .visa-content img {
 header .header-body .header-body-visa .each-visa .visa-title {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+}
+
+@media (max-width: 767px) {
+  header .header-body .header-body-visa .each-visa .visa-title {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 header .header-body .header-body-visa .each-visa .visa-title h2 {
@@ -187,6 +241,9 @@ header .header-body .scroll-down {
 
 main .section-title {
   font-family: "ALK Sanet", sans-serif;
+  position: relative;
+  z-index: 9;
+  color: #010038;
 }
 
 main #blog {
@@ -215,7 +272,7 @@ main #blog .each-blog .blog-image:after {
   right: 10px;
   top: 10px;
   bottom: 10px;
-  z-index: 9;
+  z-index: 5;
   border: 2px solid #fff;
 }
 
@@ -315,9 +372,22 @@ main #contact {
   background-position: center;
   background-image: url("https://www.trzcacak.rs/myfile/full/26-261650_dotted-world-map-vector-png.png");
   padding: 100px 0;
+  position: relative;
+}
+
+main #contact::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 main #contact .contact-form {
+  position: relative;
+  z-index: 3;
   padding: 50px 0;
 }
 
@@ -419,6 +489,14 @@ footer .container .footer-nav .nav-ul .nav-li .nav-link {
   font-family: "ALK Sanet", sans-serif;
 }
 
+@media (max-width: 500px) {
+  footer .container .footer-nav .nav-ul .nav-li .nav-link {
+    font-size: 13px !important;
+    font-family: "BPG Arial", sans-serif;
+    padding: 5px;
+  }
+}
+
 footer .container .footer-start {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -432,6 +510,13 @@ footer .container .footer-start {
 
 footer .container .footer-start p {
   margin-left: 15px;
+}
+
+@media (max-width: 500px) {
+  footer .container .footer-start p {
+    font-family: "BPG Arial", sans-serif;
+    font-size: 14px;
+  }
 }
 
 #myBtn {

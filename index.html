@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/chevron.css">
+    <link href="assets/hamburgers/dist/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/fonts/css/alk-sanet/alk-sanet.min.css">
     <link rel="stylesheet" href="assets/fonts/bpg-arial-master/css/bpg-arial.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <header class="scrol-sec">
         <section class="header-navigation">
             <section class="container">
                 <nav class="header-nav">
@@ -32,6 +34,11 @@
                             <p>EN</p>
                         </li> -->
                     </ul>
+                    <button class="hamburger hamburger--emphatic" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
                 </nav>
             </section>
         </section>
@@ -88,7 +95,7 @@
     <main>
 
         <!-- blog section  -->
-        <section class="container">
+        <section class="container scrol-sec">
             <section class="blog-section" id="blog">
                 <h2 class="section-title">ბლოგი</h2>
                 <div class="row">
@@ -205,12 +212,12 @@
         </section>
 
         <!-- satistic section  -->
-        <section class="satistic-section" id="satistic">
+        <section class="satistic-section scrol-sec" id="satistic">
 
         </section>
 
         <!-- about us section  -->
-        <section class="container">
+        <section class="container scrol-sec">
             <section class="aboutus-section" id="about_us">
                 <h2 class="section-title">ჩვენ შესახებ</h2>
 
@@ -244,7 +251,7 @@
         </section>
 
         <!-- contact section  -->
-        <section class="contact-section" id="contact">
+        <section class="contact-section  scrol-sec" id="contact">
 
             <section class="container">
                 <h2 class="section-title">კონტაქტი</h2>
@@ -290,10 +297,10 @@
     </footer>
 
     <button onclick='topFunction()' id="myBtn" title="Go to top">
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-        
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+
     </button>
 
     <!-- S C R I P T S -->

@@ -39,30 +39,50 @@ body
 ::placeholder
     font-family: "BPG Arial", sans-serif
 
+
 header
     // background: #110133
     position: relative
+    .active-header
+        position: fixed !important
+        left: 50% !important
+        top: 0 !important
+        background: #f5f0e3
+        width: 100%
+        transform: translateX(-50%)
+        animation: header 0.5s ease-in-out
+        .nav-link
+            color: #010038 !important
     .header-navigation
         position: absolute
-        z-index: 2
+        z-index: 9
         left: 0
         top: 0
         width: 100%
+        transition: all 0.45s
         section
             .header-nav
                 display: flex
                 justify-content: space-between
                 align-items: center
                 padding: 10px 0
-                
-
                 .header-logo
                     img
                         width: 70px
+                .hamburger
+                    display: none
+                    outline: none
+                    +tablet
+                        display: flex
+                    .hamburger-inner
+                        background: #fff 
+                        &::after, &::before
+                            background: #fff
+                            
                 .nav-ul
                     display: flex
                     position: relative
-                    +laptop_sm
+                    +tablet
                         display: none
                     .border-bottomm
                         transition: all 0.3s
@@ -118,6 +138,9 @@ header
                     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
                     +tablet
                         transform: rotate(0deg)
+                    +laptop_sm
+                        margin: 30px auto !important
+
 
                     &:hover
                         cursor: pointer
@@ -128,6 +151,9 @@ header
                         object-fit: cover
                 .visa-title
                     transform:  rotate(-15deg)
+                    transition: all 0.45s
+                    +tablet
+                        transform:  rotate(0deg)
                     h2
                         text-align: center
                         a
@@ -143,6 +169,9 @@ header
 main
     .section-title
         font-family: "ALK Sanet", sans-serif
+        position: relative
+        z-index: 9
+        color: #010038
 
     #blog
         padding: 100px 0
@@ -163,7 +192,7 @@ main
                     right: 10px
                     top: 10px
                     bottom: 10px
-                    z-index: 9
+                    z-index: 5
                     border: 2px solid #fff
                 img
                     width: 100%
@@ -225,7 +254,18 @@ main
         background-position: center
         background-image: url('https://www.trzcacak.rs/myfile/full/26-261650_dotted-world-map-vector-png.png')
         padding: 100px 0
+        position: relative
+        &::after
+            position: absolute
+            content: ""
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            background: rgba(255,255,255,0.5)
         .contact-form
+            position: relative
+            z-index: 3
             padding: 50px 0
             .form-group
                 padding-top: 30px
@@ -285,6 +325,12 @@ footer
                     .nav-link
                         color: #f5f0e3
                         font-family: "ALK Sanet", sans-serif
+                        +mobile
+                            font-size: 13px !important
+                            font-family: "BPG Arial", sans-serif
+                            padding: 5px
+
+
         .footer-start
             display: flex
             align-items: center
@@ -292,6 +338,9 @@ footer
             color: #fff
             p
                 margin-left: 15px
+                +mobile
+                    font-family: "BPG Arial", sans-serif
+                    font-size: 14px
 
 #myBtn 
     display: none
