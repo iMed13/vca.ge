@@ -1,0 +1,410 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ecf3ff !important;
+}
+
+::-webkit-input-placeholder {
+  font-family: "BPG Arial", sans-serif;
+}
+
+:-ms-input-placeholder {
+  font-family: "BPG Arial", sans-serif;
+}
+
+::-ms-input-placeholder {
+  font-family: "BPG Arial", sans-serif;
+}
+
+::placeholder {
+  font-family: "BPG Arial", sans-serif;
+}
+
+header {
+  position: relative;
+}
+
+header .header-navigation {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+header .header-navigation section .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+header .header-navigation section .header-nav .header-logo img {
+  width: 70px;
+}
+
+header .header-navigation section .header-nav .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+header .header-navigation section .header-nav .nav-ul .border-bottomm {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 2px;
+  background: #f0134d;
+  position: absolute;
+  bottom: 0;
+}
+
+header .header-navigation section .header-nav .nav-ul .active-nav-link .nav-link {
+  color: #f0134d !important;
+}
+
+header .header-navigation section .header-nav .nav-ul .nav-li:hover .nav-link {
+  color: #f0134d !important;
+}
+
+header .header-navigation section .header-nav .nav-ul .nav-li .nav-link {
+  color: #f5f0e3;
+  font-family: "ALK Sanet", sans-serif;
+}
+
+header .header-body {
+  min-height: 100vh;
+  background-color: #003f5c;
+  background-image: url("assets/media/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .header-body::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 8, 60, 0.6);
+  z-index: 1;
+}
+
+header .header-body .header-body-visa {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header-body .header-body-visa .each-visa .visa-content {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  margin: 30px;
+  width: 250px;
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
+  height: 300px;
+  background: #c70d3a;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+header .header-body .header-body-visa .each-visa .visa-content:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(0deg) !important;
+          transform: rotate(0deg) !important;
+}
+
+header .header-body .header-body-visa .each-visa .visa-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .header-body .header-body-visa .each-visa .visa-title {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+header .header-body .header-body-visa .each-visa .visa-title h2 {
+  text-align: center;
+}
+
+header .header-body .header-body-visa .each-visa .visa-title h2 a {
+  color: #fff;
+  font-size: 20px;
+  font-family: "ALK Sanet", sans-serif;
+}
+
+header .header-body .scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  z-index: 3;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .section-title {
+  font-family: "ALK Sanet", sans-serif;
+}
+
+main #blog {
+  padding: 100px 0;
+}
+
+main #blog .each-blog {
+  margin: 15px 0;
+}
+
+main #blog .each-blog:hover .blog-image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main #blog .each-blog .blog-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+main #blog .each-blog .blog-image:after {
+  position: absolute;
+  content: "";
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  z-index: 9;
+  border: 2px solid #fff;
+}
+
+main #blog .each-blog .blog-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+main #blog .each-blog h2 {
+  line-height: 20px;
+  padding: 15px 0;
+}
+
+main #blog .each-blog h2 a {
+  font-size: 17px;
+  font-family: "ALK Sanet", sans-serif;
+  color: #f0134d !important;
+}
+
+main #blog .each-blog .blog-text {
+  height: 300px;
+  overflow: hidden;
+  background-size: 120px 100px;
+  background-repeat: no-repeat;
+}
+
+main #blog .each-blog .blog-text p {
+  font-family: "BPG Arial", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: justify;
+  color: #010038;
+}
+
+main #blog .each-blog .blog-see-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 15px 0;
+  background: #010038;
+}
+
+main #blog .each-blog .blog-see-more button {
+  border: none;
+  background: none;
+}
+
+main #blog .each-blog .blog-see-more button a {
+  display: inline-block;
+  font-family: "ALK Sanet", sans-serif;
+  color: #f5f0e3;
+  padding-right: 15px;
+}
+
+main #blog .blog-pagination {
+  padding: 30px;
+  margin: 30px 0 15px 0;
+}
+
+main #about_us {
+  padding: 100px 0;
+}
+
+main #about_us .about-us-text {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 15px 30px 0;
+}
+
+main #about_us .about-us-text p {
+  text-align: justify;
+  font-family: "BPG Arial", sans-serif;
+}
+
+main #about_us .about-us-image {
+  padding: 30px 0 30px  15px;
+}
+
+main #about_us .about-us-image img {
+  width: 100%;
+}
+
+main #contact {
+  padding: 100px 0;
+}
+
+main #contact .contact-form {
+  padding: 50px 0;
+}
+
+main #contact .contact-form .form-group {
+  padding-top: 30px;
+}
+
+main #contact .contact-form .form-group label {
+  font-family: "ALK Sanet", sans-serif;
+}
+
+main #contact .contact-form .form-group textarea {
+  height: 300px;
+  resize: none;
+}
+
+main #contact .contact-form button {
+  font-family: "ALK Sanet", sans-serif;
+}
+
+main #satistic {
+  background-image: url("assets/media/visa.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  position: relative;
+}
+
+main #satistic::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  background: #39375b;
+}
+
+footer .container {
+  padding: 30px 0;
+}
+
+footer .container .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+footer .container .footer-nav .footer-logo img {
+  width: 70px;
+}
+
+footer .container .footer-nav .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+footer .container .footer-nav .nav-ul .border-bottomm {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 2px;
+  background: #f0134d;
+  position: absolute;
+  bottom: 0;
+}
+
+footer .container .footer-nav .nav-ul .active-nav-link .nav-link {
+  color: #f0134d !important;
+}
+
+footer .container .footer-nav .nav-ul .nav-li:hover .nav-link {
+  color: #f0134d !important;
+}
+
+footer .container .footer-nav .nav-ul .nav-li .nav-link {
+  color: #f5f0e3;
+  font-family: "ALK Sanet", sans-serif;
+}
+
+footer .container .footer-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "ALK Sanet", sans-serif;
+  color: #fff;
+}
+
+footer .container .footer-start p {
+  margin-left: 15px;
+}
+/*# sourceMappingURL=style.css.map */
