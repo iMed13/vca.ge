@@ -54,12 +54,16 @@ header
                 justify-content: space-between
                 align-items: center
                 padding: 10px 0
+                
+
                 .header-logo
                     img
                         width: 70px
                 .nav-ul
                     display: flex
                     position: relative
+                    +laptop_sm
+                        display: none
                     .border-bottomm
                         transition: all 0.3s
                         height: 2px
@@ -87,6 +91,7 @@ header
         display: flex
         align-items: center
         justify-content: center
+        padding:  120px
         &::after
             position: absolute
             content: ""
@@ -111,6 +116,9 @@ header
                     height: 300px
                     background: #c70d3a
                     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+                    +tablet
+                        transform: rotate(0deg)
+
                     &:hover
                         cursor: pointer
                         transform: rotate(0deg) !important
@@ -213,7 +221,9 @@ main
             img
                 width: 100%
     #contact
-        // background: #9be3de
+        background-repeat: no-repeat
+        background-position: center
+        background-image: url('https://www.trzcacak.rs/myfile/full/26-261650_dotted-world-map-vector-png.png')
         padding: 100px 0
         .contact-form
             padding: 50px 0
@@ -251,6 +261,8 @@ footer
             justify-content: space-between
             align-items: center
             padding: 10px 0
+            +laptop_sm
+                flex-direction: column
             .footer-logo
                 img
                     width: 70px
@@ -280,3 +292,30 @@ footer
             color: #fff
             p
                 margin-left: 15px
+
+#myBtn 
+    display: none
+    position: fixed
+    bottom: 20px
+    right: 30px
+    z-index: 99
+    font-size: 18px
+    border: none 
+    outline: none
+    color: white
+    cursor: pointer
+    border-radius: 4px
+    transform: rotate(180deg)
+    width: 35px
+    height: 70px
+    background: none
+    z-index: 999
+    &::after
+        position: absolute
+        content: ""
+        bottom: -30px
+        left: 2px
+        width: 100%
+        height: 100%
+        background: #010038
+        z-index: -1
