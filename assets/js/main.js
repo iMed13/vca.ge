@@ -49,7 +49,7 @@ window.addEventListener('wheel', function(e)
 {
   var secttion = $(".scrol-sec");
   var lnnnn = secttion.length;
-  console.log(secttion.eq(2).offset().top)
+  // console.log(secttion.eq(2).offset().top)
   for(var i=0; i<=5; i++)
   {
     if(secttion.eq(i).offset().top == 0)
