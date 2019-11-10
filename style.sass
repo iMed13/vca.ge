@@ -47,15 +47,15 @@ header
         position: fixed !important
         left: 50% !important
         top: 0 !important
-        background: #f5f0e3
+        background: #48452a
         width: 100%
         transform: translateX(-50%)
         animation: header 0.5s ease-in-out
-        .nav-link
-            color: #010038 !important
+        // .nav-link
+        //     color: #010038 !important
     .header-navigation
         position: absolute
-        z-index: 9
+        z-index: 99
         left: 0
         top: 0
         width: 100%
@@ -67,6 +67,8 @@ header
                 align-items: center
                 padding: 10px 0
                 .header-logo
+                    position: relative
+                    z-index: 999
                     img
                         width: 70px
                 .hamburger
@@ -75,15 +77,28 @@ header
                     +tablet
                         display: flex
                     .hamburger-inner
-                        background: #fff 
+                        background-color: #fff 
                         &::after, &::before
-                            background: #fff
+                            background-color: #fff
                             
+                .active-menu
+                    display: flex !important
+                    background: #48452a
+                    left: 0 !important
+                    .nav-link
+                        color: #fff !important
                 .nav-ul
                     display: flex
                     position: relative
+                    transition: all 0.45s ease-in-out
                     +tablet
-                        display: none
+                        position: fixed
+                        padding-top: 100px
+                        left: -100%
+                        top: 0
+                        width: 50%
+                        min-height: 100vh
+                        flex-direction: column
                     .border-bottomm
                         transition: all 0.3s
                         height: 2px
@@ -94,6 +109,8 @@ header
                         .nav-link
                             color: #f0134d !important
                     .nav-li
+                        +tablet
+                            width: max-content
                         &:hover
                           .nav-link 
                               color: #f0134d !important 
@@ -174,7 +191,7 @@ main
         color: #010038
 
     #blog
-        padding: 100px 0
+        padding: 120px 0
         .each-blog
             margin: 15px 0
             &:hover
@@ -236,7 +253,7 @@ main
             // background: #010038
             margin: 30px 0 15px 0 
     #about_us
-        padding: 100px 0
+        padding: 120px 0
         .about-us-text
             height: 100%
             display: flex
@@ -253,7 +270,7 @@ main
         background-repeat: no-repeat
         background-position: center
         background-image: url('https://www.trzcacak.rs/myfile/full/26-261650_dotted-world-map-vector-png.png')
-        padding: 100px 0
+        padding: 120px 0
         position: relative
         &::after
             position: absolute

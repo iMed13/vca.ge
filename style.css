@@ -30,7 +30,7 @@ header .active-header {
   position: fixed !important;
   left: 50% !important;
   top: 0 !important;
-  background: #f5f0e3;
+  background: #48452a;
   width: 100%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -38,13 +38,9 @@ header .active-header {
           animation: header 0.5s ease-in-out;
 }
 
-header .active-header .nav-link {
-  color: #010038 !important;
-}
-
 header .header-navigation {
   position: absolute;
-  z-index: 9;
+  z-index: 99;
   left: 0;
   top: 0;
   width: 100%;
@@ -65,6 +61,11 @@ header .header-navigation section .header-nav {
   padding: 10px 0;
 }
 
+header .header-navigation section .header-nav .header-logo {
+  position: relative;
+  z-index: 999;
+}
+
 header .header-navigation section .header-nav .header-logo img {
   width: 70px;
 }
@@ -83,11 +84,23 @@ header .header-navigation section .header-nav .hamburger {
 }
 
 header .header-navigation section .header-nav .hamburger .hamburger-inner {
-  background: #fff;
+  background-color: #fff;
 }
 
 header .header-navigation section .header-nav .hamburger .hamburger-inner::after, header .header-navigation section .header-nav .hamburger .hamburger-inner::before {
-  background: #fff;
+  background-color: #fff;
+}
+
+header .header-navigation section .header-nav .active-menu {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  background: #48452a;
+  left: 0 !important;
+}
+
+header .header-navigation section .header-nav .active-menu .nav-link {
+  color: #fff !important;
 }
 
 header .header-navigation section .header-nav .nav-ul {
@@ -95,11 +108,22 @@ header .header-navigation section .header-nav .nav-ul {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
 }
 
 @media (max-width: 767px) {
   header .header-navigation section .header-nav .nav-ul {
-    display: none;
+    position: fixed;
+    padding-top: 100px;
+    left: -100%;
+    top: 0;
+    width: 50%;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -114,6 +138,14 @@ header .header-navigation section .header-nav .nav-ul .border-bottomm {
 
 header .header-navigation section .header-nav .nav-ul .active-nav-link .nav-link {
   color: #f0134d !important;
+}
+
+@media (max-width: 767px) {
+  header .header-navigation section .header-nav .nav-ul .nav-li {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 
 header .header-navigation section .header-nav .nav-ul .nav-li:hover .nav-link {
@@ -247,7 +279,7 @@ main .section-title {
 }
 
 main #blog {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 main #blog .each-blog {
@@ -340,7 +372,7 @@ main #blog .blog-pagination {
 }
 
 main #about_us {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 main #about_us .about-us-text {
@@ -371,7 +403,7 @@ main #contact {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("https://www.trzcacak.rs/myfile/full/26-261650_dotted-world-map-vector-png.png");
-  padding: 100px 0;
+  padding: 120px 0;
   position: relative;
 }
 
